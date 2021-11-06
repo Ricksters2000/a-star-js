@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Star</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cols">
+            <fieldset>
+                <legend>Randomize</legend>
+                <button id='random-grid'>Grid</button>
+                <button id='random-colors'>Colors</button>
+            </fieldset>
+            <fieldset class="cols">
+                <legend>Size</legend>
+                <label for="size-canvas">Canvas (W x H)</label>
+                <input id="size-canvas" type="text">
+                <br>
+                <label for="size-grid">Grid (Rows x Cols)</label>
+                <input id="size-grid" type="text">
+            </fieldset>
+        </div>
+        <fieldset>
+            <legend>Cursor</legend>
+            <p>Follow Cursor: <strong id="label-cursor">ON</strong></p>
+            <p>Press <strong>q</strong> to toggle</p>
+        </fieldset>
+    </div>
+    <canvas id="display" ></canvas>
+
+    <!-- classes -->
+    <script src="src/classes/aStar.js"></script>
+    <script src="src/classes/grid.js"></script>
+    <script src="src/classes/cell.js"></script>
+    <script src="src/classes/point.js"></script>
+    <!-- Input -->
+    <script src="src/input/cursor.js"></script>
+    <script src="src/input/randomization.js"></script>
+    <script src="src/input/size.js"></script>
+    <!-- Helper Functions -->
+    <script src="src/services/drawing.js"></script>
+    <script src="src/services/random.js"></script>
+    <!-- Constants and Main Script -->
+    <script src="src/constants.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
