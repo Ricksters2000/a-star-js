@@ -8,6 +8,20 @@
     flex-direction: column;
 }
 
+.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltip-child {
+    position: absolute;
+    width: max-content;
+    max-width: 300px;
+    left: 5px;
+    top: -15px;
+    background-color: #7fffd4c7;
+    
+}
+
 fieldset {
     height: fit-content;
     /* margin-left: auto; */
