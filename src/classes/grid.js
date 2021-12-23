@@ -86,7 +86,7 @@ class Grid {
     reset() {
         this.recentlyChanged.forEach(pos => {
             const [r,c] = pos
-            this.setTile(r, c, this.arr[r][c] > DEST ? FLOOR : this.arr[r][c])
+            this.setTile(r, c, this.arr[r][c] > FLOOR ? FLOOR : this.arr[r][c])
         })
 
         this.recentlyChanged = []
