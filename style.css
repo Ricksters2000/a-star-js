@@ -17,9 +17,37 @@
     width: max-content;
     max-width: 300px;
     left: 5px;
-    top: -15px;
-    background-color: #7fffd4c7;
-    
+    top: -25px;
+    background-color: #ffffffc7;
+    padding: .15rem 0.1rem;
+    border: solid 1px;
+    border-color: hsl(60deg 74% 50%);
+    border-radius: 0.25rem;
+
+    visibility: hidden;
+}
+
+.tooltip:hover .tooltip-child {
+    visibility: visible;
+    /* background-color: #ffffffc7; */
+    animation: fade-in;
+    animation-duration: 1s;
+    /* animation-delay: .5s; */
+}
+
+@keyframes fade-in {
+    from {
+        visibility: visible;
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(0, 0, 0, 0);
+        color: rgba(0, 0, 0, 0);
+    }
+    to {
+        visibility: visible;
+        background-color: #ffffffc7;
+        border-color: hsl(60deg 74% 50%);
+        color: black;
+    }
 }
 
 fieldset {
