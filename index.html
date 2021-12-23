@@ -30,58 +30,68 @@
             <p>Press <strong>q</strong> to toggle</p>
         </fieldset>
     </div>
-    <canvas id="display" ></canvas>
-    <fieldset>
-        <legend>Color Key</legend>
-        <label class="tooltip">
-            Start
-            <span class="tooltip-child">The starting tile</span>
-        </label>
-        <input id="start-color" type="color">
-        <br>
-        <label class="tooltip">
-            Goal
-            <span class="tooltip-child">Tile that is being searched for</span>
-        </label>
-        <input id="goal-color" type="color">
-        <br>
-        <label class="tooltip">
-            Wall
-            <span class="tooltip-child">Tiles that can't be passed</span>
-        </label>
-        <input id="wall-color" type="color">
-        <br>
-        <label class="tooltip">
-            Floor
-            <span class="tooltip-child">Tiles that can be passed</span>
-        </label>
-        <input id="floor-color" type="color">
-        <br>
-        <label class="tooltip">
-            Path
-            <span class="tooltip-child">The starting tile</span>
-        </label>
-        <input id="path-color" type="color">
-        <br>
-        <label class="tooltip">
-            Current
-            <span class="tooltip-child">The current path being checked</span>
-        </label>
-        <input id="current-color" type="color">
-        <br>
-        <label class="tooltip">
-            Open
-            <span class="tooltip-child">Tiles next to be checked</span>
-        </label>
-        <input id="open-color" type="color">
-        <br>
-        <label class="tooltip">
-            Closed
-            <span class="tooltip-child">Tiles already checked</span>
-        </label>
-        <input id="closed-color" type="color">
-        <br>
-    </fieldset>
+    <div class="canvas-container">
+        <canvas id="display" ></canvas>
+        <fieldset class="color-key">
+            <legend>Color Key</legend>
+            <div>
+                <label class="tooltip">
+                    Start
+                    <span class="tooltip-child">The starting tile</span>
+                </label>
+                <input id="start-color" type="color">
+                <br>
+            </div>
+            <div>
+                <label class="tooltip">
+                    Goal
+                    <span class="tooltip-child">Tile that is being searched for</span>
+                </label>
+                <input id="goal-color" type="color">
+                <br>
+            </div>
+            <div>
+                <label class="tooltip">
+                    Wall
+                    <span class="tooltip-child">Tiles that can't be passed</span>
+                </label>
+                <input id="wall-color" type="color">
+                <br>
+            </div>
+            <div>
+                <label class="tooltip">
+                    Floor
+                    <span class="tooltip-child">Tiles that can be passed</span>
+                </label>
+                <input id="floor-color" type="color">
+                <br>
+            </div>
+            <div>
+                <label class="tooltip">
+                    Path
+                    <span class="tooltip-child">The closest path from start to goal</span>
+                </label>
+                <input id="path-color" type="color">
+                <br>
+            </div>
+            <div>
+                <label class="tooltip">
+                    Open
+                    <span class="tooltip-child">Tiles next to be checked</span>
+                </label>
+                <input id="open-color" type="color">
+                <br>
+            </div>
+            <div>
+                <label class="tooltip">
+                    Closed
+                    <span class="tooltip-child">Tiles already checked</span>
+                </label>
+                <input id="closed-color" type="color">
+                <br>
+            </div>
+        </fieldset>
+    </div>
 
     <!-- classes -->
     <script src="src/classes/aStar.js"></script>
@@ -90,6 +100,7 @@
     <script src="src/classes/point.js"></script>
     <!-- Input -->
     <script src="src/input/cursor.js"></script>
+    <script src="src/input/colorKeys.js"></script>
     <script src="src/input/randomization.js"></script>
     <script src="src/input/size.js"></script>
     <!-- Helper Functions -->
