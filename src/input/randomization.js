@@ -11,7 +11,9 @@ const handleRandomizeGrid = () => {
     aStar.dest = dest
 }
 
-const handleRandomizeColors = () => {
+const handleRandomizeColors = (colorKeys) => {
     grid.tileTypes = randomizeTileColors()
     grid.drawGrid()
+
+    setInputColors(colorKeys, grid.tileTypes);
 }

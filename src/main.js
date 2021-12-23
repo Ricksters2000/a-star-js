@@ -18,11 +18,14 @@ let trackCursor = true
 
 onload = () => {
     const body = document.getElementsByTagName('body').item(0)
+
     const btnGrid = document.getElementById('random-grid')
     const btnColors = document.getElementById('random-colors')
     const txtCanvas = document.getElementById('size-canvas')
     const txtGrid = document.getElementById('size-grid')
     const lblCursor = document.getElementById('label-cursor')
+
+    const colorKeys = [...document.getElementsByTagName('input')].filter(v => v.type === 'color')
 
     // canvas.width = innerHeight
     // canvas.height = innerHeight
@@ -53,7 +56,12 @@ onload = () => {
     addEventListener('keypress', (e) => handleCursorTrackingToggle(e, lblCursor))
     canvas.addEventListener('mousemove', handleMouseHover)
     btnGrid.addEventListener('click', handleRandomizeGrid)
-    btnColors.addEventListener('click', handleRandomizeColors)
+    btnColors.addEventListener('click', () => handleRandomizeColors(colorKeys))
     txtCanvas.addEventListener('change', handleCanvasSizeChange)
     txtGrid.addEventListener('change', handleGridSizeChange)
+
+    colorKeys.forEach((obj, i) => {
+        obj.value = tileTypes[i]
+        obj.addEventListener('change', (evt) => setTileColor(evt, i))
+    })
 }
