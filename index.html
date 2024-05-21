@@ -92,6 +92,27 @@
             </div>
         </fieldset>
     </div>
+    <div>
+      <h1>About A*</h1>
+      <p>
+        A* is a pathfinding algorithm that search for an approximate of the shortest path very effeciently. This algorithm is commonly used for AI in games and in web-based
+      </p>
+      <h2>How Does It Work?</h2>
+      <p>
+        This starts off by having an open list and a closed list which these will be used to store the cells.
+        The starting cell will be first pushed into the open list.
+        While the open list is not empty:
+        Find the cell with the least f (this is a value that is calculated based on the amount of cells in the current path + the diagonal distance from the cell to the goal)
+        Remove this cell from the open list
+        Generate the successors to this cell (this implementation allows for the path to move in 8 directions so there will be 8 successors)
+        For each successor:
+        Check if this is the goal and if so then stop the search
+        Calculate f for the successor
+        If a cell with the same position is in the open list and has a lower f then skip this successor
+        If a cell with the same position is in the closed list and has a lower f then skip this successor
+        Otherwise add the successor to the open list
+      </p>
+    </div>
 
     <!-- classes -->
     <script src="src/classes/aStar.js"></script>
