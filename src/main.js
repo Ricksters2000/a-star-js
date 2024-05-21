@@ -17,8 +17,6 @@ let prevType = null
 let trackCursor = true
 
 onload = () => {
-    const body = document.getElementsByTagName('body').item(0)
-
     const btnGrid = document.getElementById('random-grid')
     const btnColors = document.getElementById('random-colors')
     const txtCanvas = document.getElementById('size-canvas')
@@ -48,8 +46,6 @@ onload = () => {
     grid.randomize()
     grid.setTile(src.y, src.x, SRC)
     grid.setTile(dest.y, dest.x, DEST)
-
-    body.style.backgroundColor = grid.outlineColor
 
     aStar = new AStar(grid, src, dest)
 
